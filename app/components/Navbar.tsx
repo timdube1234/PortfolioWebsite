@@ -8,7 +8,7 @@ import ThemeButton from "./ThemeButton";
 export default function Navbar() {
   let pathname = usePathname() || "/";
   return (
-    <Disclosure as="nav" className="bg-navBG dark:bg-black">
+    <Disclosure as="nav" className="bg-teal-500 dark:bg-black">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto">
@@ -18,7 +18,7 @@ export default function Navbar() {
                   <Link href="/">
                     <h1 className="text-2xl font-medium text-white">
                       Timmy{" "}
-                      <span className="text-navAccent dark:text-teal-500">
+                      <span className="text-white dark:text-teal-500">
                         Dube
                       </span>
                     </h1>
@@ -31,7 +31,7 @@ export default function Navbar() {
                     prefetch
                     className={`${
                       pathname === "/"
-                        ? "dark:border-teal-500 text-white dark:text-white h-full inline-flex items-center px-1 pt-1 dark:border-b-2 text-sm font-medium"
+                        ? "dark:border-teal-500 text-navAccent dark:text-white h-full inline-flex items-center px-1 pt-1 dark:border-b-2 text-sm font-extrabold"
                         : "border-transparent text-navAccent dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                     }`}
                   >
@@ -43,7 +43,7 @@ export default function Navbar() {
                     prefetch
                     className={`${
                       pathname === "/components/Languages"
-                        ? "dark:border-teal-500 text-white dark:text-white h-full inline-flex items-center px-1 pt-1 dark:border-b-2 text-sm font-medium"
+                        ? "dark:border-teal-500 text-navAccent dark:text-white h-full inline-flex items-center px-1 pt-1 dark:border-b-2 text-sm font-extrabold"
                         : "border-transparent text-navAccent dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                     }`}
                   >
@@ -55,7 +55,7 @@ export default function Navbar() {
                     prefetch
                     className={`${
                       pathname === "/components/Projects"
-                        ? "dark:border-teal-500 text-white dark:text-white h-full inline-flex items-center px-1 pt-1 dark:border-b-2 text-sm font-medium"
+                        ? "dark:border-teal-500 text-navAccent dark:text-white h-full inline-flex items-center px-1 pt-1 dark:border-b-2 text-sm font-extrabold"
                         : "border-transparent text-navAccent dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                     }`}
                   >

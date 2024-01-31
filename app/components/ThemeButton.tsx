@@ -17,7 +17,7 @@ export default function Themebutton() {
   return (
     <button
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-      className="bg-navAccent/30 dark:bg-teal-500/30 p-2 rounded-lg text-navAccent dark:text-teal-500 mt-1"
+      className="bg-white/30 dark:bg-teal-500/30 p-2 rounded-lg text-white dark:text-teal-500 mt-1"
     >
       {resolvedTheme === "dark" ? (
         <svg

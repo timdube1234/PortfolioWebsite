@@ -11,7 +11,8 @@ const config: Config = {
     extend: {
       colors: {
         navBG: "#943629",
-        navAccent: "#D3D0CB",
+        navAccent: "#FFF",
+        themeButton: "#D3D0CB",
       },
     },
   },
