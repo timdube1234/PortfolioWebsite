@@ -21,7 +21,7 @@ export default function Home() {
             Timothy Dube
           </h3>
           <p className="text-gray-500 dark:text-gray-300 text-center mt-2">
-            Hey my name is Tim and I'm a developer
+            Hey my name is Tim and I&apos;m a developer
           </p>
 
           {/* GitHub Icon */}
