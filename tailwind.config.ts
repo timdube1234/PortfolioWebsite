@@ -10,9 +10,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navBG: "#943629",
+        navBG: "#319795",
+        skillHighlight: "#00aed1",
+        customRed: "#943629",
         navAccent: "#FFF",
         themeButton: "#D3D0CB",
+        pageTitle: "#000",
+      },
+      height: {
+        "22": "5rem", // Custom value as an example
       },
     },
   },

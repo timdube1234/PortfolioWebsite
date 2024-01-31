@@ -25,50 +25,55 @@ export default async function Projects() {
   const data: Data[] = await getProjects();
   console.log(data);
   return (
-    <div className="divide-y divide-gray-200 dark:divide-gray-700 mt-4 dark:mt-0 mb-20">
-      <div className="space-y-2 pt-6 pb-8 pb-8 md:space-y-5">
-        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+    <div className="divide-y divide-gray-300 dark:divide-gray-700 bg-gray-100 dark:bg-black">
+      <div className="pt-9 pb-12 md:space-y-5 dark:pt-6">
+        <h1 className="text-3xl font-bold leading-9 tracking-tight text-pageTitle dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 mx-14">
           All Projects
         </h1>
       </div>
-      <div className="grid gap-y-8 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10 pt-8 ">
-        {data.map((project) => (
-          <article
-            key={project._id}
-            className="overflow-hidden dark:border-zinc-600 rounded-lg border border-gray-100 bg-white shadow-lg dark:bg-black dark:shadow-gray-700 shadow-teal-100"
-          >
-            <div className="h-56 w-full relative">
-              {" "}
-              {/* Added relative positioning */}
-              <Image
-                fill
-                src={project.imageUrl}
-                alt="image of the project"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="p-4 sm:p-6">
-              <a href={project.link} target="_blank">
-                <h3 className="text-lg font-meduim text-gray-900 dark:text-white">
-                  {project.title}
-                </h3>
-              </a>
-              <p className="line-clamp-3 mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-                {project.overview}
-              </p>
-              <a
-                href={project.link}
-                target="_blank"
-                className="group mt-4 inline-flex items-center gap-1 font-medium text-teal-500"
-              >
-                Learn More!
-                <span className="block transition-all group-hover:ms-0.5">
-                  &rarr;
-                </span>
-              </a>
-            </div>
-          </article>
-        ))}
+      <div className="pb-10">
+        <div className="grid gap-y-8 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10 pt-10 mx-14">
+          {data.map((project) => (
+            <article
+              key={project._id}
+              className="overflow-hidden dark:border-zinc-600 rounded-lg border border-gray-200 bg-white dark:bg-black  shadow-lg dark:shadow-gray-700 shadow-teal-400"
+            >
+              <div className="dark:hidden">
+                <h1 className="pt-10 bg-white dark:bg-transparent" />
+              </div>
+              <div className="h-56 w-full relative">
+                {" "}
+                {/* Added relative positioning */}
+                <Image
+                  fill
+                  src={project.imageUrl}
+                  alt="image of the project"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4 sm:p-6 bg-white dark:bg-transparent">
+                <a href={project.link} target="_blank">
+                  <h3 className="text-lg font-meduim text-gray-900 dark:text-white">
+                    {project.title}
+                  </h3>
+                </a>
+                <p className="line-clamp-3 mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                  {project.overview}
+                </p>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  className="group mt-4 inline-flex items-center gap-1 font-medium text-teal-500"
+                >
+                  Learn More!
+                  <span className="block transition-all group-hover:ms-0.5">
+                    &rarr;
+                  </span>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </div>
   );
