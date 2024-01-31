@@ -4,12 +4,12 @@ import me from "@/public/LinkedInProfilePic.jpeg";
 export default function Home() {
   return (
     <div className="divide-y divide-gray-300 dark:divide-gray-700 bg-gray-100 dark:bg-black ">
-      <div className="pt-9 pb-10 md:space-y-5 dark:bg-transparent dark:pt-6">
+      <div className="pt-9 pb-12 md:space-y-5 dark:bg-transparent dark:pt-6">
         <h1 className="text-3xl font-bold leading-9 tracking-tight text-pageTitle dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 mx-14">
           Home
         </h1>
       </div>
-      <div className="pb-40">
+      <div className="pt-10 pb-40">
         <div className="items-center space-y-2 xl:grid xl:grid-cols-3 xl:gap-8-x xl:space-y-0">
           <div className="flex flex-col items-center pt-8">
             <Image

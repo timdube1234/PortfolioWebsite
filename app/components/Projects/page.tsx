@@ -31,7 +31,7 @@ export default async function Projects() {
           All Projects
         </h1>
       </div>
-      <div className="pb-10">
+      <div className="pt-8 pb-10">
         <div className="grid gap-y-8 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10 pt-10 mx-14">
           {data.map((project) => (
             <article
@@ -39,16 +39,16 @@ export default async function Projects() {
               className="overflow-hidden dark:border-zinc-600 rounded-lg border border-gray-200 bg-white dark:bg-black  shadow-lg dark:shadow-gray-700 shadow-teal-400"
             >
               <div className="dark:hidden">
-                <h1 className="pt-10 bg-white dark:bg-transparent" />
+                <h1 className="pt-12 bg-white dark:bg-transparent" />
               </div>
-              <div className="h-56 w-full relative">
+              <div className="h-60 w-full dark:h-60 relative">
                 {" "}
                 {/* Added relative positioning */}
                 <Image
                   fill
                   src={project.imageUrl}
                   alt="image of the project"
-                  className="w-full h-full object-cover"
+                  className="h-full w-full rounded object-cover"
                 />
               </div>
               <div className="p-4 sm:p-6 bg-white dark:bg-transparent">

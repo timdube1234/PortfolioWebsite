@@ -31,7 +31,7 @@ export default async function Languages() {
   console.log(data);
   return (
     <div className="divide-y divide-gray-300 dark:divide-gray-700 bg-gray-100 dark:bg-black ">
-      <div className="pt-9 pb-10 md:space-y-5 dark:pt-6">
+      <div className="pt-9 pb-12 md:space-y-5 dark:pt-6">
         <h1 className="text-3xl font-bold leading-9 tracking-tight text-pageTitle dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 mx-14">
           Languages
         </h1>
