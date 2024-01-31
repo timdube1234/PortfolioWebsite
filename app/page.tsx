@@ -72,7 +72,7 @@ export default function Home() {
         </div>
         <div className="prose max-w-none prose-lg pt-8 pb-7 dark:prose-invert xl:col-span-2">
           <p>
-            Hello! I'm Tim Dube, a dedicated{" "}
+            Hello! I&apos;m Tim Dube, a dedicated{" "}
             <span className="font-bold text-teal-400 dark:text-blue-500">
               Junior year Computer Science student
             </span>{" "}
@@ -83,7 +83,7 @@ export default function Home() {
             <span className="font-bold text-teal-400 dark:text-blue-500">
               6 years
             </span>
-            , I've developed a strong foundation in programming and a deep
+            , I&apos;ve developed a strong foundation in programming and a deep
             understanding of various programming languages, including{" "}
             <span className="font-bold text-teal-400 dark:text-blue-500">
               Python, Java, and C.
