@@ -39,7 +39,7 @@ export default function Navbar() {
                   </Link>
 
                   <Link
-                    href="/components/Languages"
+                    href="/components/Languages/"
                     prefetch
                     className={`${
                       pathname === "/components/Languages"

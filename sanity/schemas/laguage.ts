@@ -18,5 +18,20 @@ export default {
       type: 'string',
       title: 'Skill Level',
     },
+    {
+      name: 'numYears',
+      type: 'number',
+      title: 'Number Of Years',
+    },
+    {
+      name: 'link',
+      type: 'string',
+      title: 'Link',
+    },
+    {
+      name: 'image',
+      type: 'image',
+      title: 'Image',
+    },
   ],
 }

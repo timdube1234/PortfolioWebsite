@@ -7,6 +7,7 @@ interface Data {
   link: string;
   _id: string;
   imageUrl: string;
+  logoImageUrl: string;
 }
 
 async function getProjects() {
@@ -15,15 +16,18 @@ async function getProjects() {
             overview,
             link,
             _id,
-            "imageUrl": image.asset->url  // Corrected here
+            "imageUrl": image.asset->url,
+            "logoImageUrl": logoImage.asset->url
         }`;
   const data = await client.fetch(query);
   return data;
 }
+
 export const revalidate = 60;
 export default async function Projects() {
   const data: Data[] = await getProjects();
   console.log(data);
+
   return (
     <div className="divide-y divide-gray-300 dark:divide-gray-700 bg-gray-100 dark:bg-black">
       <div className="pt-9 pb-12 md:space-y-5 dark:pt-6">
@@ -38,10 +42,7 @@ export default async function Projects() {
               key={project._id}
               className="overflow-hidden dark:border-zinc-600 rounded-lg border border-gray-200 bg-white dark:bg-black  shadow-lg dark:shadow-gray-700 shadow-teal-400"
             >
-              <div className="dark:hidden">
-                <h1 className="pt-12 bg-white dark:bg-transparent" />
-              </div>
-              <div className="h-60 w-full dark:h-60 relative">
+              <div className="h-80 w-full relative">
                 {" "}
                 {/* Added relative positioning */}
                 <Image
@@ -51,7 +52,7 @@ export default async function Projects() {
                   className="h-full w-full rounded object-cover"
                 />
               </div>
-              <div className="p-4 sm:p-6 bg-white dark:bg-transparent">
+              <div className="pt-10 pb-10 mb-0 sm:p-6 bg-white dark:bg-transparent">
                 <a href={project.link} target="_blank">
                   <h3 className="text-lg font-meduim text-gray-900 dark:text-white">
                     {project.title}
@@ -60,16 +61,27 @@ export default async function Projects() {
                 <p className="line-clamp-3 mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
                   {project.overview}
                 </p>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  className="group mt-4 inline-flex items-center gap-1 font-medium text-teal-500"
-                >
-                  Learn More!
-                  <span className="block transition-all group-hover:ms-0.5">
-                    &rarr;
-                  </span>
-                </a>
+                <div className="flex items-center">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    className="group mt-4 inline-flex items-center gap-1 font-medium text-teal-500"
+                  >
+                    Learn More!
+                    <span className="block transition-all group-hover:ms-0.5">
+                      &rarr;
+                    </span>
+                  </a>
+                </div>
+                <div className="ml-80 mb-0 bg-transparent rounded-full relative absolute inset-0 bg-transparent dark:bg-black dark:opacity-80">
+                  {" "}
+                  {/* Background circle */}
+                  <img
+                    src={project.logoImageUrl} // Replace with your image path
+                    alt="Descriptive Alt Text"
+                    className="h-10 w-10 ml-2 mt-2 rounded-full" // Adjust size as needed, rounded-full makes the image circular
+                  />
+                </div>
               </div>
             </article>
           ))}

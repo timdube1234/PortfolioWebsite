@@ -20,8 +20,8 @@ export default function Home() {
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">
               Timothy Dube
             </h3>
-            <p className="text-gray-500 dark:text-gray-300 text-center mt-2">
-              Hey my name is Tim and I&apos;m a developer
+            <p className="text-gray-500 dark:text-gray-300 text-center font-lg mt-1 mb-1">
+              Contact Me
             </p>
 
             {/* GitHub Icon */}

@@ -23,5 +23,10 @@ export default {
       type: 'image',
       title: 'Image',
     },
+    {
+      name: 'logoImage',
+      type: 'image',
+      title: 'Logo Image',
+    },
   ],
 }
