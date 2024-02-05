@@ -43,8 +43,8 @@ export default async function Languages() {
           Languages
         </h1>
       </div>
-      <div className="pt-8 pb-10">
-        <div className="grid gap-y-8 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10 pt-10 mx-14">
+      <div className="pt-4 pb-10">
+        <div className="grid gap-y-8 sm:grid-cols-2 md:gap-6 lg:grid-cols-4 lg:gap-10 pt-10 mx-6 lg:mx-14">
           {data.map((language) => (
             <article
               key={language._id}
@@ -53,7 +53,7 @@ export default async function Languages() {
               <div>
                 <h1 className="pt-12 bg-white dark:bg-transparent" />
               </div>
-              <div className="h-60 w-full relative">
+              <div className="h-52 w-full relative">
                 <Image
                   fill
                   src={language.imageUrl}

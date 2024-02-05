@@ -70,7 +70,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="prose max-w-none prose-lg pt-8 pb-7 dark:prose-invert xl:col-span-2">
+          <div className="prose max-w-none prose-lg pt-8 pb-7 sm:px-4 sm:text-center dark:prose-invert xl:col-span-2">
             <p>
               Hello! I&apos;m Tim Dube, a dedicated{" "}
               <span className="font-bold text-teal-400 dark:text-blue-500">

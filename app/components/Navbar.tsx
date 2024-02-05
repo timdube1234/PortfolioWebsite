@@ -11,7 +11,7 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-teal-500 dark:bg-black">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl ml-4 lg:ml-14">
             <div className="flex justify-between h-22">
               <div className="flex justify-between w-full">
                 <div className="flex items-center">
@@ -65,7 +65,7 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <div className="-mr-2 flex items-center sm:hidden">
+              <div className="mr-2 flex items-center sm:hidden">
                 <ThemeButton />
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500 dark:hover:bg-gray-800">
                   {open ? (
